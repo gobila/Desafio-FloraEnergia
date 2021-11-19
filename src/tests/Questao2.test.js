@@ -52,32 +52,32 @@ describe('Questaoi 1 Testes', () => {
 });
 
 describe('Questaoi 2 Testes', () => {
-  test('Checa se retorna dado certo', () => {
+  test('2.1 Checa se retorna dado certo', () => {
     const res1 = validateWord('abcabc');
     expect(res1).toEqual(true);
   });
 
-  test('Checa se retorna dado certo', () => {
+  test('2.2 Checa se retorna dado certo', () => {
     const res1 = validateWord('Abcabc');
     expect(res1).toEqual(true);
   });
 
-  test('Checa se retorna dado certo', () => {
+  test('2.3 Checa se retorna dado certo', () => {
     const res1 = validateWord('abc123');
     expect(res1).toEqual(true);
   });
 
-  test('Checa se retorna dado certo', () => {
+  test('2.4 Checa se retorna dado certo', () => {
     const res1 = validateWord('abcabcd');
     expect(res1).toEqual(false);
   });
 
-  test('Checa se retorna dado certo', () => {
+  test('2.5 Checa se retorna dado certo', () => {
     const res1 = validateWord('abc!abc!');
     expect(res1).toEqual(true);
   });
 
-  test('Checa se retorna dado certo', () => {
+  test('2.6 Checa se retorna dado certo', () => {
     const res1 = validateWord('abc:abc');
     expect(res1).toEqual(false);
   });

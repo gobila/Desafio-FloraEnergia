@@ -5,21 +5,14 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: ${() => theme.colors.backgorund.ligth.color};
-  }
-`;
+import { GlobalStyle } from './theme/GlobalStyle';
+import Routes from './Routes';
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <App />
+      <Routes />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),

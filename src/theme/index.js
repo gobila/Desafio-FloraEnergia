@@ -22,11 +22,20 @@ const colors = {
     },
   },
 };
-
+export const breakpoints = {
+  xs: 0,
+  sm: 480,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1440,
+  ultrawide: 2543,
+};
 export default {
   colors,
+  breakpoints,
   borderRadius: '50px',
-  fontFamily: '\'Roboto Thin\', sans-serif',
+  fontFamily: '\'Roboto \', sans-serif',
   transition: '200ms ease-in-out',
 
 };

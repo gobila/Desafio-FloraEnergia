@@ -2,9 +2,9 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { ApiConnect } from './services/api';
-import Text from './components/Text';
+import Card from './components/Card';
 
-const App = function () {
+function App() {
   const [posts, setPosts] = useState([]);
   const api = ApiConnect;
 
@@ -21,28 +21,25 @@ const App = function () {
           <span>Flora Energia</span>
         </h2>
         <h4>Siga os passos no arquivo README.md</h4>
-
+        <a href="/assinatura">Pagina questao 3</a>
       </TitleCont>
 
       {/* Insira o INPUT SEARCH aqui */}
       <CardsCont>
         {posts.map((post) => (
-          <>
-            <h2>{post.title}</h2>
-            <Text tag="p">{post.body}</Text>
-          </>
+          <Card postTitle={post.title} postBody={post.body} />
         ))}
       </CardsCont>
     </Main>
   );
-};
+}
 
 export default App;
 
 const Main = styled.section`
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   display: flex;
   flex-direction: column;
 `;
@@ -70,6 +67,6 @@ const CardsCont = styled.div`
   height: 100%;
 `;
 
-const Card = styled.div`
-  /* INSIRA O CSS DO CARD (POSTS) AQUI */
-`;
+// const Card = styled.div`
+//   /* INSIRA O CSS DO CARD (POSTS) AQUI */
+// `;
