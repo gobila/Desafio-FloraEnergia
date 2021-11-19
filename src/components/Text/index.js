@@ -3,17 +3,16 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const TextBase = styled.span`
-    /* font-size: 18px; */
     ${({ variant }) => {
     if (variant === 'destaque') {
       return css`
         font-size: 18px;
         text-decoration: underline;
         align-self:flex-start;
-        margin:5px
+        margin:5px;
       `;
     }
-    if (variant === 'aviso') {
+    if (variant === 'destaque') {
       return css`
         font-size: 16px;
         margin:5px;
@@ -22,10 +21,20 @@ const TextBase = styled.span`
     if (variant === 'bold') {
       return css`
         font-weight:bold;
-        color:${({ theme }) => theme.colors.button.main.color}
+        color:${({ theme }) => theme.colors.button.main.color};
       `;
     }
     return '';
+  }};
+  ${({ as }) => {
+    if (as === 'h1') {
+      return css`
+        font-size: 28px;
+      `;
+    }
+    return css`
+        font-size: 18px;
+      `;
   }}
 `;
 
