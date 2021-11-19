@@ -16,6 +16,13 @@ const ButtonBase = styled.button`
     if (variant === 'emphasis') {
       return ButtonEmphasis;
     }
+    if (variant === 'home') {
+      return css`
+        margin-bottom: 30px;
+        background-color: ${({ theme }) => theme.colors.button.main.color};
+        color: ${({ theme }) => theme.colors.button.main.contrastColor};
+      `;
+    }
     return ButtonDefault;
   }}
   border-radius: 25px;

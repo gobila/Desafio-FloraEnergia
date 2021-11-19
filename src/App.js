@@ -1,8 +1,10 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { ApiConnect } from './services/api';
 import Card from './components/Card';
+import Button from './components/Button';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -21,7 +23,9 @@ function App() {
           <span>Flora Energia</span>
         </h2>
         <h4>Siga os passos no arquivo README.md</h4>
-        <a href="/assinatura">Pagina questao 3</a>
+        <Button variant="home">
+          <Link to="/assinatura" style={{ textDecoration: 'none', color: 'white' }}> Pagina questao 3 </Link>
+        </Button>
       </TitleCont>
 
       {/* Insira o INPUT SEARCH aqui */}
