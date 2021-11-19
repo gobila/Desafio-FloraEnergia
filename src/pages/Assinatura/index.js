@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 import FormProposta from '../../components/FormProposta';
 import Menu from '../../components/Menu';
@@ -41,11 +42,13 @@ export default function AssinaturaPage() {
         </Assinatura.Termos>
 
         <Assinatura.Buttons>
-          <Button>
-            <Text tag="p"> Voltar</Text>
-          </Button>
+          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+            <Button>
+              Voltar
+            </Button>
+          </Link>
           <Button variant="emphasis">
-            <Text tag="p"> Avançar</Text>
+            <Text to="/"> Avançar </Text>
           </Button>
         </Assinatura.Buttons>
       </Assinatura.Container>
